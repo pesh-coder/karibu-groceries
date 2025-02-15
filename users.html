@@ -1,82 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard - KGL</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-8">
 
-    <div class="flex justify-between items-center mb-4">
-        <h1 class="text-2xl font-bold">User List</h1>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2">
-            <a href="users_profile.html">Add User</a>
-        </button>
-    </div>
-        <div class="mb-4">
-            <input type="text" placeholder="Search users..." class="w-full border-gray-300 border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+<body class="bg-gray-100">
+
+    <div class="flex h-screen overflow-hidden">
+        <div class="w-64 bg-teal-700 text-white flex flex-col fixed inset-y-0 left-0 overflow-y-auto">
+            <div>
+                <div class="p-10">
+                    <img src="./imgs/logos/2.png" alt="Karibu Groceries Limited logo" class="h-90">
+                </div>
+
+                <nav class="space-y-4">
+                    <a href="dashboard.html" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Dashboard
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Companies
+                    </a>
+                    <a href="users.html" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Users
+                    </a>
+                    <a href="products.html" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Products
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Payments
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-2 hover:bg-teal-800">
+                        Sales
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-4 hover:bg-red-700">
+                        Logout
+                    </a>
+                </nav>
+            </div>
+
+            <div class="p-4 bg-teal-800">
+                <div class="flex items-center space-x-3">
+                    <img src="./imgs/Logos/sitati_patience.jpg" alt="Admin" class="h-10 w-10 rounded-full">
+                    <div>
+                        <p class="text-sm">Admin</p>
+                        <p class="font-bold">Sitati Patience</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <table class="w-full border-collapse bg-white rounded-lg shadow-sm">
-            <thead>
-                <tr class="bg-gray-200 text-left">
-                    <th class="p-3">Profile</th>
-                    <th class="p-3">Name</th>
-                    <th class="p-3">Email</th>
-                    <th class="p-3">Role</th>
-                    <th class="p-3">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-t">
-                    <td class="p-3">
-                        <img src="./imgs/Logos/sitati_patience.jpg" alt="Admin" class="h-10 w-10 rounded-full"></td>
-                    <td class="p-3">Sitati Patience</td>
-                    <td class="p-3">patiencesitati99@gmail.com</td>
-                    <td class="p-3">Admin</td>
-                    <td class="p-3">
-                        <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
-                    </td>
-                </tr>
-               
-                <tr class="border-t">
-                    <td class="p-3">
-                        <img src="./imgs/profile-pics/prof-2.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
-                    <td class="p-3">Amad Kiefaz</td>
-                    <td class="p-3">kglmanager@gmail.com</td>
-                    <td class="p-3">User</td>
-                    <td class="p-3">
-                        <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
-                    </td>
-                </tr>
-                <tr class="border-t">
-                    <td class="p-3">
-                        <img src="./imgs/profile-pics/prof-3.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
-                    <td class="p-3">Shifa Said</td>
-                    <td class="p-3">kglattendant1@gmail.com</td>
-                    <td class="p-3">User</td>
-                    <td class="p-3">
-                        <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
-                    </td>
-                </tr>
-                <tr class="border-t">
-                    <td class="p-3">
-                        <img src="./imgs/profile-pics/prof-1.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
-                    <td class="p-3">Moret David</td>
-                    <td class="p-3">kglattendant2@gmail.com</td>
-                    <td class="p-3">User</td>
-                    <td class="p-3">
-                        <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="flex-1 ml-64 overflow-y-auto p-8 bg-gray-100">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-2xl font-bold">User List</h1>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2">
+                    <a href="users_profile.html">Add User</a>
+                </button>
+            </div>
+            <div class="flex justify-between items-center mb-4" >
+                <div class="mb-4 b">
+                    <input type="text" placeholder="Search users..." class="w-full border-gray-300 border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>    
+                <table class="w-full border-collapse bg-white rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-3">Profile</th>
+                            <th class="p-3">Name</th>
+                            <th class="p-3">Email</th>
+                            <th class="p-3">Role</th>
+                            <th class="p-3">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="p-3">
+                                <img src="./imgs/Logos/sitati_patience.jpg" alt="Admin" class="h-10 w-10 rounded-full"></td>
+                            <td class="p-3">Sitati Patience</td>
+                            <td class="p-3">patiencesitati99@gmail.com</td>
+                            <td class="p-3">Admin</td>
+                            <td class="p-3">
+                                <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
+                            </td>
+                        </tr>
+                       
+                        <tr class="border-t">
+                            <td class="p-3">
+                                <img src="./imgs/profile-pics/prof-2.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
+                            <td class="p-3">Amad Kiefaz</td>
+                            <td class="p-3">kglmanager@gmail.com</td>
+                            <td class="p-3">User</td>
+                            <td class="p-3">
+                                <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
+                            </td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="p-3">
+                                <img src="./imgs/profile-pics/prof-3.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
+                            <td class="p-3">Shifa Said</td>
+                            <td class="p-3">kglattendant1@gmail.com</td>
+                            <td class="p-3">User</td>
+                            <td class="p-3">
+                                <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
+                            </td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="p-3">
+                                <img src="./imgs/profile-pics/prof-1.png" alt="Admin" class="h-10 w-10 rounded-full"></td>
+                            <td class="p-3">Moret David</td>
+                            <td class="p-3">kglattendant2@gmail.com</td>
+                            <td class="p-3">User</td>
+                            <td class="p-3">
+                                <a href="users_profile.html" class="text-blue-500 hover:underline">Edit Profile</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex justify-between items-center text-white bg-gray-800 rounded-lg mt-4">
+                    <a href="dashboard.html" class="hover:underline items-center p-4">Back to Dashboard</a>
+                    <footer class="text-white p-4 text-center flex">
+                        <p>&copy; 2025 KGL</p>
+                    </footer>
+                </div>
     </div>
-<div class="flex justify-between items-center text-white bg-gray-800 rounded-lg mt-4">
-    <a href="dashboard.html" class="hover:underline items-center p-4">Back to Dashboard</a>
-    <footer class="text-white p-4 text-center flex">
-        <p>&copy; 2025 KGL</p>
-    </footer>
-</div>
 </body>
 </html>
