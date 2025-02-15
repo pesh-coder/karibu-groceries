@@ -52,54 +52,117 @@
             </div>
         </div>
 
-        <div class="flex-1 ml-64 overflow-y-auto p-8 bg-white">
+        <div class="flex-1 ml-64 overflow-y-auto p-8 bg-gray-100 mb-300">
             <h1 class="text-2xl font-bold mb-6">Dashboard</h1>
-            <div class="grid grid-cols-3 gap-6 mb-6">
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <p class="text-gray-600">Companies</p>
-                    <p class="text-2xl font-bold">15</p>
+            <div class="flex justify-between bg-gray-100 shadow p-4">
+                <!-- Left Section: Welcome Message -->
+                <div>
+                  <h1 class="text-lg font-semibold">Hello, <span class="text-teal-700">Sitati!</span></h1>
                 </div>
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <p class="text-gray-600">Users</p>
-                    <p class="text-2xl font-bold">5</p>
+              
+                <!-- Center Section: Search Bar -->
+                <div class="flex-1 mx-6 max-w-md">
+                  <input
+                    type="text"
+                    placeholder="Search companies, users, products..."
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  />
                 </div>
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <p class="text-gray-600">Products</p>
-                    <p class="text-2xl font-bold">5</p>
+              
+                <!-- Right Section: Date & Notifications -->
+                <div class="flex items-center space-x-4">
+                  <p class="text-gray-600 text-sm hidden md:block">
+                    <span id="currentDate"></span>
+                  </p>
+                  <button class="text-gray-500 hover:text-teal-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118.5 14V11a6.5 6.5 0 10-13 0v3c0 .417-.152.82-.405 1.138L4 17h5m6 0a3 3 0 11-6 0" />
+                    </svg>
+                  </button>
                 </div>
-            </div>
-
-            <div class="bg-gray-50 p-6 rounded-lg shadow">
-                <h2 class="font-bold mb-4">Latest Sales</h2>
-                <table class="w-full border-collapse">
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Companies -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow flex flex-col items-center text-center">
+                  <a href="dashboard.html" class="text-blue-500 hover:underline"><h2 class="text-lg font-semibold text-gray-700">Companies</h2></a>
+                  <p class="text-3xl font-bold text-teal-600">6</p>
+                </div>
+              
+                <!-- Users -->
+                <div class="bg-white p-4 rounded-lg shadow mt-10 flex flex-col items-center text-center">
+                  <a href="users.html" class="text-blue-500 hover:underline"><h2 class="text-lg font-semibold text-gray-700">Users</h2></a> 
+                  <p class="text-3xl font-bold text-teal-600">4</p>
+                </div>
+              
+                <!-- Products -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow flex flex-col items-center text-center">
+                  <a href="products.html " class="text-blue-500 hover:underline"><h2 class="text-lg font-semibold text-gray-700">Products</h2></a>
+                  <p class="text-3xl font-bold text-teal-600">5</p>
+                </div>
+              
+                <!-- Payments -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow flex flex-col items-center text-center">
+                  <h2 class="text-lg font-semibold text-gray-700">Payments</h2>
+                  <p class="text-3xl font-bold text-teal-600">UGX 2,000,000</p>
+                </div>
+              
+                <!-- Sales -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow flex flex-col items-center text-center">
+                  <h2 class="text-lg font-semibold text-gray-700">Sales</h2>
+                  <p class="text-3xl font-bold text-teal-600">50</p>
+                  <span class="text-sm text-gray-500">This month</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 mt-10 overflow-y-auto md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product Spotlight -->
+                <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center text-center">
+                  <img src="./imgs/products/beans-3.png" alt="Beans" class="w-24 h-24 object-cover rounded-full mb-3">
+                  <h3 class="text-lg font-semibold">Beans</h3>
+                  <p class="text-gray-500">High Demand</p>
+                  <p class="text-teal-600 font-bold mt-2">UGX 3,000/kg</p>
+                </div>
+              
+                <!-- Latest Sales -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow">
+                  <h3 class="text-lg font-semibold mb-4 ">Latest Sales</h3>
+                  <table class="w-full text-left">
                     <thead>
-                        <tr class="bg-gray-200 text-left">
-                            <th class="p-2">#</th>
-                            <th class="p-2">Branch</th>
-                            <th class="p-2">Product</th>
-                            <th class="p-2">Price (UGX)</th>
-                        </tr>
+                      <tr class="bg-gray-200 text-gray-600 uppercase text-xs leading-normal">
+                        <th class="py-3 px-4">Branch</th>
+                        <th class="py-3 px-4">Product</th>
+                        <th class="py-3 px-4">Price (UGX)</th>
+                      </tr>
                     </thead>
-                    <tbody>
-                        <tr class="border-t hover:bg-gray-100">
-                            <td class="p-2">1</td>
-                            <td class="p-2">Matugga</td>
-                            <td class="p-2">Coffee</td>
-                            <td class="p-2">50,000</td>
-                        </tr>
-                        <tr class="border-t hover:bg-gray-100">
-                            <td class="p-2">2</td>
-                            <td class="p-2">Matugga</td>
-                            <td class="p-2">Beans</td>
-                            <td class="p-2">150,000</td>
-                        </tr>
+                    <tbody class="text-gray-600 text-sm divide-y divide-gray-200">
+                      <tr>
+                        <td class="py-3 px-4">Matugga</td>
+                        <td class="py-3 px-4">Beans</td>
+                        <td class="py-3 px-4">150,000</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4">Maganjo</td>
+                        <td class="py-3 px-4">Maize</td>
+                        <td class="py-3 px-4">200,000</td>
+                      </tr>
                     </tbody>
-                </table>
-            </div>
+                  </table>
+                </div>
+              
+                <!-- Location / Staff Info -->
+                <div class="bg-white p-4 rounded-lg mt-10 shadow flex items-center space-x-4">
+                  <img src="./imgs/profile-pics/prof-1.png" alt="Staff" class="h-14 w-14 rounded-full object-cover">
+                  <div>
+                    <h3 class="text-lg font-semibold">Moret David</h3>
+                    <p class="text-gray-500 text-sm">On duty - Matugga Branch</p>
+                  </div>
+                </div>
+              </div>
         </div>
+            
+            
 
-    </div>
 
+  
 </body>
 
 </html>
