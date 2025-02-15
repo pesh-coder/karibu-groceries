@@ -1,0 +1,37 @@
+#header {
+    background: url('../imgs/products/cereals.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /
+}
+
+
+#main {
+    margin-top: 200px;
+}
+
+#dashboard-container {
+    margin-top: 10px;
+}
+
+.kgl-headers {
+    background-color: beige;
+}
+
+#main {
+    border-radius: 12px;
+    max-width: 1000px;
+    margin-top: 0 auto;
+    padding-top: 40px ;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 200px;
+    
+}
+#kglLogo {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#register {
+    margin-bottom: 50px;
+}
